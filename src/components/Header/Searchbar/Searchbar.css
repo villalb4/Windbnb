@@ -1,0 +1,58 @@
+
+.Header_divSearch {
+  width: 299px;
+}
+
+.Header_search {
+  display: flex;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 1px 6px 0px #0000001A;
+  background-color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+.Header_divSearchLocation {
+  display: flex;
+  justify-content: center;
+  padding: 19px 16px 18px 16px;
+  font-family: 'Mulish';
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  width: 138px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Header_divSearchLocation:hover {
+  background-color: #eb575716;
+}
+
+.Header_divSearchGuests {
+  border-left: 1px solid #F2F2F2;;
+  border-right: 1px solid #F2F2F2;;
+  padding: 19px 16px 18px 16px;
+  font-family: 'Mulish';
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Header_divSearchGuests:hover {
+  background-color: #eb575716;
+}
+
+.Header_divSearchIcon {
+  padding: 19px 17.95px 17px 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Header_searchIcon {
+  height: 17.6px;
+  width: 17.5px;
+}

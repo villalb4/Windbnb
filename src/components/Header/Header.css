@@ -1,0 +1,12 @@
+header {
+  padding: 0 32px;
+  margin-bottom: 35px;
+}
+.Header_divContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1253px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
