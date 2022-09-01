@@ -27,7 +27,7 @@
 }
 
 .Header_divSearchLocation:hover {
-  background-color: #eb575716;
+  background-color: #eb57570e;
 }
 
 .Header_divSearchGuests {
@@ -43,13 +43,17 @@
 }
 
 .Header_divSearchGuests:hover {
-  background-color: #eb575716;
+  background-color: #eb57570e;
 }
 
 .Header_divSearchIcon {
-  padding: 19px 17.95px 17px 17px;
+  padding: 19px 19px 17px 17px;
   cursor: pointer;
   transition: all 0.3s ease;
+
+}
+.Header_divSearchIcon:hover {
+  background-color: #eb57572c;
 }
 
 .Header_searchIcon {

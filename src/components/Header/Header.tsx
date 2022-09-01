@@ -10,7 +10,7 @@ function Header() {
     <header>
       <div className='Header_divContent'>
         <div>
-          <img src={logo} alt="" />
+          <img className='Header_logo' src={logo} alt="" />
         </div>
         <nav>
           <Searchbar />
