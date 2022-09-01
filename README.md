@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://{https://github.com/villalb4/Windbnb}">
       Solution
     </a>
     <span> | </span>
