@@ -1,0 +1,5 @@
+.TopHome_component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,9 @@
+main {
+  max-width: 1253px;
+  margin: 0 auto;
+}
+.Home_topDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

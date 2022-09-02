@@ -1,0 +1,81 @@
+.Menu_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    box-shadow: 0px 1px 6px 0px #0000001A;
+    border-radius: 16px;
+}
+
+.Menu_topDivOption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    height: 55px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+.Menu_topDivOption:hover{
+    border: 1px solid #333333;
+}
+.Menu_optionSpan {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 9px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #333333;
+}
+.Menu_topDivOption.divLocation {
+    max-width: 426px;
+    width: 100%;
+    padding: 0 26px;
+}
+.Menu_topDivOption.divGuests {
+    max-width: 426px;
+    width: 100%;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #F2F2F2;
+    padding: 12px 32px 10px;
+}
+.Menu_topDivOption.divSearch {
+    max-width: 395px;
+    width: 100%;
+}
+.Menu_topDivOption.divSearch:hover{
+    border: 1px solid transparent;
+}
+.Menu_SearchButton {
+    display: flex;
+    align-items: center;
+    gap: 10.95px;
+    max-width: 127px;
+    padding: 16px 24px 15px 27px;
+
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #F2F2F2;
+
+    background-color:#EB5757;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 1px 6px 0px #0000001A;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Menu_SearchButton:hover {
+    background-color:#d04242;
+}
+.Menu_divIconSearch {
+    height: 17px;
+    width: 17px;
+}
+.Menu_iconSearch {
+    width: 17px;
+}

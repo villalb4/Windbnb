@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import Searchbar from './Searchbar/Searchbar'
+// import Menu from './Menu/Menu'
 
 // ----- images -----
 import logo from '../../assets/logo.svg'
