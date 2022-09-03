@@ -3,7 +3,6 @@ import { useDispatch , useSelector} from 'react-redux'
 import './Home.css'
 import TopHome from './TopHome/TopHome'
 import { setAllHotels } from '../../redux/slice/allHotels'
-import Menu from '../Header/Menu/Menu'
 
 function Home() {
 
@@ -14,7 +13,6 @@ function Home() {
 
   return (
     <main>
-      <Menu />
       <TopHome />
     </main>
   )
