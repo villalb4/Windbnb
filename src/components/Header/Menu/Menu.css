@@ -1,23 +1,22 @@
 .Menu_component {
     opacity: 0;
+    visibility: hidden;
     position: absolute;
-    top: -30px;
     height: 100vh;
     width: 100vw;
+    transform: translateY(-20px);
     left: 0;
-    background-color: #4F4F4F66;
-    pointer-events: none;
     transition: all 0.3s ease;
+    background-color: #4F4F4F66;
 }
 .Menu_component.active {
     opacity: 1;
-    top: 0;
-    pointer-events: all;
+    visibility: visible;
+    transform: translateY(0);
 }
 .Menu_divContent {
     background-color: #FFF;
     padding: 93px 0 90px;
-    /* pointer-events: none; */
 }
 .Menu_divBackground {
     max-width: 1253px;
