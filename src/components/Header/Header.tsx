@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import './Header.css'
 import Searchbar from './Searchbar/Searchbar'
 import Menu from './Menu/Menu'
@@ -18,17 +18,31 @@ function Header() {
     setOpenMenu(e)
   }
 
+  const locationRef = useRef(null)
+  const guestsRef = useRef(null)
+
+  console.log("header useRef:", locationRef)
+
   return (
     <header>
       <div>
-        <Menu  closeMenu={handleMenuClose} stateMenu={openMenu}/>
+        <Menu 
+          closeMenu={handleMenuClose}
+          stateMenu={openMenu}
+          refLoc={locationRef}
+          refGue={guestsRef}
+        />
       </div>
       <div className='Header_divContent'>
         <div>
           <img className='Header_logo' src={logo} alt="" />
         </div>
         <nav>
-          <Searchbar openMenu={handleMenuOpen}/>
+          <Searchbar
+            openMenu={handleMenuOpen}
+            refLoc={locationRef}
+            refGue={guestsRef}
+          />
         </nav>
       </div>
     </header>

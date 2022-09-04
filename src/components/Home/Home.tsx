@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useDispatch , useSelector} from 'react-redux'
 import './Home.css'
 import TopHome from './TopHome/TopHome'
@@ -8,8 +8,11 @@ function Home() {
 
   const dispatch = useDispatch();
 
-  // const hoteles = useSelector((state:any) => state.setAllHotels.allHotels)
-  // console.log(hoteles)
+  // useEffect(() => {
+  // })
+
+  const hoteles = useSelector((state:any) => state)
+  console.log(hoteles.allHotels.allHotels)
 
   return (
     <main>

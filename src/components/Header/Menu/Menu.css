@@ -6,7 +6,7 @@
     width: 100vw;
     transform: translateY(-20px);
     left: 0;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     background-color: #4F4F4F66;
 }
 .Menu_component.active {
@@ -16,7 +16,8 @@
 }
 .Menu_divContent {
     background-color: #FFF;
-    padding: 93px 0 90px;
+    padding: 93px 0 40px;
+    height: 460px;
 }
 .Menu_divBackground {
     max-width: 1253px;
@@ -44,6 +45,12 @@
 .Menu_topDivOption:hover{
     border: 1px solid #333333;
 }
+.Menu_topDivOption:focus{
+    border: 1px solid #333333;
+}
+.Menu_topDivOption:focus-within {
+    border: 1px solid #333333;
+}
 .Menu_optionSpan {
     font-family: 'Mulish';
     font-style: normal;
@@ -53,11 +60,36 @@
     text-transform: uppercase;
     color: #333333;
 }
+
+/* ----- location ----- */
 .Menu_topDivOption.divLocation {
     max-width: 426px;
     width: 100%;
     padding: 0 26px;
 }
+/* .Menu_topDivOption.divLocation:focus-within {
+    border: 1px solid #333333;
+} */
+.Menu_InputLocation {
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+}
+.Menu_InputLocation::placeholder,
+.Menu_placeHolderSpan {
+    font-family: 'Mulish';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #BDBDBD;
+}
+.Menu_InputLocation:focus {
+    outline: none;
+}
+
 .Menu_topDivOption.divGuests {
     max-width: 426px;
     width: 100%;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import './Menu.css'
 import icon_search from '../../../assets/icon-search-white.png'
 
@@ -6,12 +6,9 @@ function Menu(props:any) {
 
   function handleClose(){
     props.closeMenu(false)
-  }
-
-  console.log(props)
+  };
 
   return (
-    // <div className='Menu_component'>
     <div className={props.stateMenu ? 'Menu_component active': 'Menu_component'}>
       <div className='Menu_divContent'>
         <div className='Menu_divBackground'>
@@ -19,11 +16,11 @@ function Menu(props:any) {
             <div className='Menu_top'>
               <div className='Menu_topDivOption divLocation'>
                 <span className='Menu_optionSpan'>LOCATION</span>
-                <input className='Menu_InputLocation' type="text" placeholder='Add location'/>
+                <input ref={props.refLoc} className='Menu_InputLocation' type="text" placeholder='Add location'/>
               </div>
-              <div className='Menu_topDivOption divGuests'>
+              <div ref={props.refGue} className='Menu_topDivOption divGuests'>
                 <span className='Menu_optionSpan'>GUESTS</span>
-                <span>Add guests</span>
+                <span className='Menu_placeHolderSpan'>Add guests</span>
               </div>
               <div className='Menu_topDivOption divSearch'>
                 <button className='Menu_SearchButton' onClick={handleClose}>

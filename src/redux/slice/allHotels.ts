@@ -9,8 +9,8 @@ const initialState = {
   allHotels: []
 }
 
-export const allHotels = createSlice({
-  name: "allHotels",
+export const allHotelsSlice = createSlice({
+  name: "hoteles",
   initialState,
   reducers: {
     setAllHotels: function (state:any, action:any) {
@@ -19,9 +19,9 @@ export const allHotels = createSlice({
   }
 })
 
-export const {setAllHotels} = allHotels.actions
+export const {setAllHotels} = allHotelsSlice.actions;
 
-export default allHotels.reducer
+export default allHotelsSlice.reducer
 
 // -----------------
 
