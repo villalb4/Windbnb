@@ -30,7 +30,7 @@ function Menu(props:any) {
               <div ref={props.refGue} className='Menu_topDivOption divGuests'>
                 <span className='Menu_optionSpan'>GUESTS</span>
                 <span className='Menu_placeHolderSpan'>
-                  {guestsTotal > 1 ? `${guestsTotal} guests` : "Add guests"}
+                  {guestsTotal >= 1 ? `${guestsTotal} guests` : "Add guests"}
                 </span>
               </div>
               <div className='Menu_topDivOption divSearch'>

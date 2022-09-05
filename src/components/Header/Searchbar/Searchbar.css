@@ -31,15 +31,19 @@
 }
 
 .Header_divSearchGuests {
+  display: flex;
+  justify-content: center;
   border-left: 1px solid #F2F2F2;;
   border-right: 1px solid #F2F2F2;;
-  padding: 19px 16px 18px 16px;
+  padding: 19px 15.1px 18px 15.4px;
   font-family: 'Mulish';
   font-size: 14px;
   line-height: 18px;
   color: #BDBDBD;
   cursor: pointer;
   transition: all 0.3s ease;
+  max-width: 106px;
+  width: 100%;
 }
 
 .Header_divSearchGuests:hover {
@@ -47,7 +51,7 @@
 }
 
 .Header_divSearchIcon {
-  padding: 19px 19px 17px 17px;
+  padding: 19px 20.5px 17px 17px;
   cursor: pointer;
   transition: all 0.3s ease;
 

@@ -1,10 +1,13 @@
 import React, {useRef} from 'react'
+import { useSelector } from 'react-redux'
 import './Searchbar.css'
-
-// ----- images -----
 import icon_search from '../../../assets/icon-search.png'
 
 function Searchbar(props:any) {
+
+  const adultsNum = useSelector((state: any) => state.menuCounter.adults)
+  const childrenNum = useSelector((state: any) => state.menuCounter.children)
+  const guestsTotal = adultsNum + childrenNum;
 
   function handleOpen() {
     props.openMenu(true)
@@ -31,7 +34,7 @@ function Searchbar(props:any) {
           <span>Add location</span>
         </div>
         <div className='Header_divSearchGuests' onClick={handleGuestsFocus}>
-          <span>Add guests</span>
+          <span>{guestsTotal >= 1 ? `${guestsTotal} guests` : "Add guests"}</span>
         </div>
         <div className='Header_divSearchIcon' onClick={handleOpen}>
           <img className='Header_searchIcon' src={icon_search} alt="" />
