@@ -15,10 +15,14 @@ export const menuCounter = createSlice({
     initialState,
     reducers: {
         adultIncrement: (state) => {
+					if(state.adults < 4) {
             state.adults += 1;
+					}
         },
         adultDecrement: (state) => {
+					if(state.adults > 0) {
             state.adults -= 1;
+					}
         },
         chilIncrement: (state) => {
             state.children += 1;

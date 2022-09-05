@@ -1,24 +1,29 @@
 import React, {useState} from 'react'
 import './MenuGuests.css'
+import {useDispatch, useSelector} from 'react-redux'
+import {adultIncrement, adultDecrement, chilIncrement, chilDecrement} from '../../../../redux/slice/menuCounter'
 
-function MenuGuests(props: any) {
+function MenuGuests() {
 
-  const [countAdult, setCountAdult] = useState(0)
-  const [countChil, setCountchil] = useState(0)
+  const adultCount = useSelector((state: any) => state.menuCounter.adults)
 
-  function handleSumAdults() {
-    if(countAdult  < 6) {
-      setCountAdult(countAdult + 1)
-      props.adulSet(countAdult)
-    }
-  }
-  function handleRestAdults() {
-    if (countAdult > 0) {
-      setCountAdult(countAdult - 1)
-      props.adulSet(countAdult)
-    }
+  const dispatch = useDispatch();
+
+  const handleAdultSum = () => {
+    dispatch(adultIncrement())
   }
 
+  const handleAdultDec = () => {
+    dispatch(adultDecrement())
+  }
+
+  // const chilIncrement = () => {
+  //   dispatch(chilIncrement())
+  // }
+
+  // const chilDecrement = () => {
+  //   dispatch(chilDecrement())
+  // }
 
   return (
     <div>
@@ -26,9 +31,9 @@ function MenuGuests(props: any) {
         <span>Adults</span>
         <p>Ages 13 or above</p>
         <div>
-          <button onClick={handleRestAdults}>-</button>
-          <span>{countAdult}</span>
-          <button onClick={handleSumAdults}>+</button>
+          <button onClick={handleAdultDec}>-</button>
+          <span>{adultCount}</span>
+          <button onClick={handleAdultSum}>+</button>
         </div>
       </div>
     </div>

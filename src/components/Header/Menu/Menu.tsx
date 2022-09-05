@@ -2,17 +2,20 @@ import React, {useRef, useState} from 'react'
 import './Menu.css'
 import icon_search from '../../../assets/icon-search-white.png'
 import MenuGuests from './MenuGuests/MenuGuests'
+import {useSelector} from 'react-redux'
 
 function Menu(props:any) {
+
+  const adultsNum = useSelector((state: any) => state.menuCounter.adults)
+  const childrenNum = useSelector((state: any) => state.menuCounter.children)
+
+  const guestsTotal = adultsNum + childrenNum;
+
+  console.log(guestsTotal)
 
   function handleClose(){
     props.closeMenu(false)
   };
-
-  const [gueAdults, setGueAdults] = useState(0);
-  const [gueChildren, setGueChildren] = useState(0);
-
-  console.log("Adultsssss:",gueAdults)
 
   return (
     <div className={props.stateMenu ? 'Menu_component active': 'Menu_component'}>
@@ -27,8 +30,7 @@ function Menu(props:any) {
               <div ref={props.refGue} className='Menu_topDivOption divGuests'>
                 <span className='Menu_optionSpan'>GUESTS</span>
                 <span className='Menu_placeHolderSpan'>
-                  {gueAdults >= 1 ? `${gueAdults} guests` : "Add guests"}
-                  {/* Add guests */}
+                  {guestsTotal > 1 ? `${guestsTotal} guests` : "Add guests"}
                 </span>
               </div>
               <div className='Menu_topDivOption divSearch'>
@@ -44,10 +46,7 @@ function Menu(props:any) {
         </div>
 
         <div className='Menu_bottom'>
-          <MenuGuests 
-            adulSet={setGueAdults}
-            chilSet={setGueChildren}
-          />
+          <MenuGuests />
         </div>
       </div>
     </div>
