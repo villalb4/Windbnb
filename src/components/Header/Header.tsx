@@ -21,8 +21,6 @@ function Header() {
   const locationRef = useRef(null)
   const guestsRef = useRef(null)
 
-  console.log("header useRef:", locationRef)
-
   return (
     <header>
       <div>

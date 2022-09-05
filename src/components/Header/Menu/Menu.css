@@ -16,7 +16,7 @@
 }
 .Menu_divContent {
     background-color: #FFF;
-    padding: 93px 0 40px;
+    padding: 93px 30px 40px 30px;
     height: 460px;
 }
 .Menu_divBackground {
@@ -30,6 +30,7 @@
     background-color: #FFF;
     box-shadow: 0px 1px 6px 0px #0000001A;
     border-radius: 16px;
+    margin-bottom: 48px;
 }
 
 .Menu_topDivOption {
@@ -134,4 +135,9 @@
 }
 .Menu_iconSearch {
     width: 17px;
+}
+
+/* ----- Menu Bottom ----- */
+.Menu_bottom {
+    
 }

@@ -12,7 +12,7 @@ function Home() {
   // })
 
   const hoteles = useSelector((state:any) => state)
-  console.log(hoteles.allHotels.allHotels)
+  // console.log(hoteles.allHotels.allHotels)
 
   return (
     <main>

@@ -1,12 +1,18 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import './Menu.css'
 import icon_search from '../../../assets/icon-search-white.png'
+import MenuGuests from './MenuGuests/MenuGuests'
 
 function Menu(props:any) {
 
   function handleClose(){
     props.closeMenu(false)
   };
+
+  const [gueAdults, setGueAdults] = useState(0);
+  const [gueChildren, setGueChildren] = useState(0);
+
+  console.log("Adultsssss:",gueAdults)
 
   return (
     <div className={props.stateMenu ? 'Menu_component active': 'Menu_component'}>
@@ -20,7 +26,10 @@ function Menu(props:any) {
               </div>
               <div ref={props.refGue} className='Menu_topDivOption divGuests'>
                 <span className='Menu_optionSpan'>GUESTS</span>
-                <span className='Menu_placeHolderSpan'>Add guests</span>
+                <span className='Menu_placeHolderSpan'>
+                  {gueAdults >= 1 ? `${gueAdults} guests` : "Add guests"}
+                  {/* Add guests */}
+                </span>
               </div>
               <div className='Menu_topDivOption divSearch'>
                 <button className='Menu_SearchButton' onClick={handleClose}>
@@ -34,8 +43,11 @@ function Menu(props:any) {
           </div>
         </div>
 
-        <div>
-              
+        <div className='Menu_bottom'>
+          <MenuGuests 
+            adulSet={setGueAdults}
+            chilSet={setGueChildren}
+          />
         </div>
       </div>
     </div>
