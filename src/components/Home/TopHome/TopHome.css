@@ -3,3 +3,24 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.TopH_divStayIn {
+  margin-bottom: 32px;
+}
+.TopH_divStayIn > h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+}
+
+.TopH_divStayNums > span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4F4F4F;
+}

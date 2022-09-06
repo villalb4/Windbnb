@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React from 'react'
 import './Menu.css'
 import icon_search from '../../../assets/icon-search-white.png'
 import MenuGuests from './MenuGuests/MenuGuests'

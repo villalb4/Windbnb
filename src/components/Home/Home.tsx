@@ -1,18 +1,21 @@
 import React, {useEffect} from 'react'
-import { useDispatch , useSelector} from 'react-redux'
-import './Home.css'
 import TopHome from './TopHome/TopHome'
 import Cards from './Cards/Cards'
+import { useAppDispatch , useAppSelector } from '../../redux/hooks/hooks'
+import { getHotels } from '../../redux/slice/allHotels'
+import './Home.css'
 
 function Home() {
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch()
 
-  // useEffect(() => {
-  // })
+  useEffect(() => {
+    dispatch(getHotels())
+  }, [])
 
-  // const hoteles = useSelector((state:any) => state)
-  // console.log(hoteles.allHotels.allHotels)
+  const hoteles = useAppSelector((state: any) => state.allHotels.allHotels)
+
+  console.log(hoteles)
 
   return (
     <main>

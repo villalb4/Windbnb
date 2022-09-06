@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import './Searchbar.css'
 import icon_search from '../../../assets/icon-search.png'
@@ -34,7 +34,9 @@ function Searchbar(props:any) {
           <span>Add location</span>
         </div>
         <div className='Header_divSearchGuests' onClick={handleGuestsFocus}>
-          <span>{guestsTotal >= 1 ? `${guestsTotal} guests` : "Add guests"}</span>
+          <span className={guestsTotal >=1 ? 'Header_spanTotalGuest active' : 'Header_spanTotalGuest'}>
+            {guestsTotal >= 1 ? `${guestsTotal} guests` : "Add guests"}
+          </span>
         </div>
         <div className='Header_divSearchIcon' onClick={handleOpen}>
           <img className='Header_searchIcon' src={icon_search} alt="" />
