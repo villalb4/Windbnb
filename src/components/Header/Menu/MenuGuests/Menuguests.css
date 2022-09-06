@@ -1,0 +1,47 @@
+.MenuGuests_component {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+.MenuG_divSpans {
+  margin-bottom: 12px;
+}
+.MenuG_divSpans > span {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+.MenuG_divSpans > p {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+}
+
+.MenuG_divButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.MenuG_divButtons > button {
+  height: 23px;
+  width: 23px;
+  border: 1px solid #828282;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #828282;
+  background-color: transparent;
+}
+.MenuG_divButtons > span {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}

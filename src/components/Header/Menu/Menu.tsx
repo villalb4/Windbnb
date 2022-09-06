@@ -3,6 +3,7 @@ import './Menu.css'
 import icon_search from '../../../assets/icon-search-white.png'
 import MenuGuests from './MenuGuests/MenuGuests'
 import {useSelector} from 'react-redux'
+import MenuLocation from './MenuLocation/MenuLocation'
 
 function Menu(props:any) {
 
@@ -25,11 +26,13 @@ function Menu(props:any) {
                 <span className='Menu_optionSpan'>LOCATION</span>
                 <input ref={props.refLoc} className='Menu_InputLocation' type="text" placeholder='Add location'/>
               </div>
-              <div ref={props.refGue} className='Menu_topDivOption divGuests'>
-                <span className='Menu_optionSpan'>GUESTS</span>
-                <span className='Menu_placeHolderSpan'>
-                  {guestsTotal >= 1 ? `${guestsTotal} guests` : "Add guests"}
-                </span>
+              <div className='Menu_topDivOptionBorder'>
+                <div ref={props.refGue} className='Menu_topDivOption divGuests'>
+                  <span className='Menu_optionSpan'>GUESTS</span>
+                  <span className={guestsTotal >= 1 ? 'Menu_placeHolderSpan active' : 'Menu_placeHolderSpan'}>
+                    {guestsTotal >= 1 ? `${guestsTotal} guests` : "Add guests"}
+                  </span>
+                </div>
               </div>
               <div className='Menu_topDivOption divSearch'>
                 <button className='Menu_SearchButton' onClick={handleClose}>
@@ -44,7 +47,12 @@ function Menu(props:any) {
         </div>
 
         <div className='Menu_bottom'>
-          <MenuGuests />
+          <div className='Menu_buttonDivLoc'>
+            <MenuLocation />
+          </div>
+          <div className='Menu_buttonDivGue'>
+            <MenuGuests />
+          </div>
         </div>
       </div>
     </div>

@@ -33,6 +33,7 @@
     margin-bottom: 48px;
 }
 
+
 .Menu_topDivOption {
     display: flex;
     flex-direction: column;
@@ -52,6 +53,13 @@
 .Menu_topDivOption:focus-within {
     border: 1px solid #333333;
 }
+
+.Menu_topDivOptionBorder {
+    width: 100%;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #F2F2F2;
+}
+
 .Menu_optionSpan {
     font-family: 'Mulish';
     font-style: normal;
@@ -61,6 +69,8 @@
     text-transform: uppercase;
     color: #333333;
 }
+
+
 
 /* ----- location ----- */
 .Menu_topDivOption.divLocation {
@@ -86,17 +96,21 @@
     font-size: 14px;
     line-height: 18px;
     color: #BDBDBD;
+    transition: all 0.3s ease;
+}
+.Menu_placeHolderSpan.active {
+    color: #333333;
+
 }
 .Menu_InputLocation:focus {
     outline: none;
 }
 
+/* ----- guests ----- */
 .Menu_topDivOption.divGuests {
     max-width: 426px;
     width: 100%;
-    border-left: 1px solid #F2F2F2;
-    border-right: 1px solid #F2F2F2;
-    padding: 12px 32px 10px;
+    padding: 12px 13px 10px;
 }
 .Menu_topDivOption.divSearch {
     max-width: 395px;
@@ -139,5 +153,16 @@
 
 /* ----- Menu Bottom ----- */
 .Menu_bottom {
-    
+    max-width: 1253px;
+    margin: 0 auto;
+    display: flex;
+}
+.Menu_buttonDivLoc {
+    max-width: 427px;
+    width: 100%;
+    padding: 0 27px;
+}
+
+.Menu_buttonDivGue {
+    padding: 0 13px;
 }
