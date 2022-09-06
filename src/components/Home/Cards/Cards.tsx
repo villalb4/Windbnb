@@ -1,17 +1,45 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { getHotels } from '../../../redux/slice/allHotels'
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks/hooks'
 import './Cards.css'
-import {setAllHotels} from '../../../redux/slice/allHotels'
-import {useSelector} from 'react-redux'
+
 
 function Cards() {
 
-    // const hoteles = useSelector((state:any) => state.allHotelsSlice.allHotels)
+  const dispatch = useAppDispatch()
 
-    // console.log(hoteles)
+  useEffect(() => {
+    dispatch(getHotels())
+  }, [dispatch])
+
+  const hoteles = useAppSelector((state: any) => state.allHotels.allHotels)
+
+  console.log(hoteles)
 
   return (
-    <div>
-        CARDS
+    <div className='Cards_component'>
+      <div className='Cards_divContent'>
+        {hoteles.map((e:any, i:number) => {
+          return(
+            <div key={i} className="Cards_card">
+              <div className='Cards_divStayImage'>
+                <img src={e.image} alt="Stay" />
+              </div>
+              <div className='Cards_divStayInfo'>
+                <div className='Cards_divStayText'>
+                  {e.super_host && <span>SUPER HOST</span>}
+                  <p>Entire apartment. 2beds</p>
+                </div>
+                <div className='Cards_divStayRating'>
+                  <img src="" alt="" />
+                  <span>{e.rating}</span>
+                </div>
+              </div>
+              <p>{e.description}</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

@@ -24,19 +24,54 @@ export default allHotelsSlice.reducer
 export const getHotels= () => {
   return (dispatch:any) => {
     const data: object = [{
-      image : "https://th.bing.com/th/id/R.bb05960bdb880224ff07360ca3cc40f9?rik=GTMl0Dx%2b5G6P3w&riu=http%3a%2f%2fmykarmastream.com%2fwp-content%2fuploads%2f2017%2f08%2fscandinavian-home-interior-4.png&ehk=JI9qw9YXqHoE25Rf%2f%2fulfYdngPyxL0EWMBPPEjNixvc%3d&risl=&pid=ImgRaw&r=0",
+      image : "https://addawards.ru/upload/iblock/d24/1.jpg",
       super_host: true,
-      entire_or_private: "Entire apartment.2 beds",
+      beds: 2,
       rating: "4.85",
-      description: "Stylist apartment in center of the city"
-      },
-      {
-      image : "https://th.bing.com/th/id/R.bb05960bdb880224ff07360ca3cc40f9?rik=GTMl0Dx%2b5G6P3w&riu=http%3a%2f%2fmykarmastream.com%2fwp-content%2fuploads%2f2017%2f08%2fscandinavian-home-interior-4.png&ehk=JI9qw9YXqHoE25Rf%2f%2fulfYdngPyxL0EWMBPPEjNixvc%3d&risl=&pid=ImgRaw&r=0",
+      description: "Stylist apartment in center of the city",
+      location: "Finlandia"
+    },
+    {
+      image : "https://keralaayurvedacentre.co.uk/wp-content/uploads/2020/02/the-the-benefits-of-ayurveda-in-modern-day-life.jpg",
       super_host: false,
-      entire_or_private: "Private room",
+      beds: 2,
       rating: "4.25",
-      description: "Cozy, peaceful and private room with beautiful dog"
-    }]
+      description: "Cozy, peaceful and private room with my dog.",
+      location: "Finlandia"
+    },
+    {
+      image : "https://fountainera.com/wp-content/uploads/2021/10/fountainera20.jpg",
+      super_host: false,
+      beds: 2,
+      rating: "4.90",
+      description: "Stylist apartment in center of the city",
+      location: "Finlandia"
+    },
+    {
+      image : "https://bigfoto.name/uploads/posts/2022-03/1646545004_2-bigfoto-name-p-stili-postroek-v-interere-2.jpg",
+      super_host: true,
+      beds: 2,
+      rating: "4.90",
+      description: "Stylist apartment in center of the city",
+      location: "Finlandia"
+    },
+    {
+      image : "https://bigfoto.name/uploads/posts/2022-03/1646545004_2-bigfoto-name-p-stili-postroek-v-interere-2.jpg",
+      super_host: false,
+      beds: 2,
+      rating: "4.90",
+      description: "Stylist apartment in center of the city",
+      location: "finlandia"
+    },
+    {
+      image : "https://bigfoto.name/uploads/posts/2022-03/1646545004_2-bigfoto-name-p-stili-postroek-v-interere-2.jpg",
+      super_host: false,
+      beds: 2,
+      rating: "4.90",
+      description: "Stylist apartment in center of the city",
+      location: "finlandia"
+    },
+    ]
     dispatch(setAllHotels(data))
   }
 }

@@ -1,0 +1,70 @@
+.Cards_divContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 395px);
+  column-gap: 15px;
+  row-gap: 50px;
+  justify-content: space-between;
+}
+
+.Cards_card {
+  max-width: 395px;
+}
+
+.Cards_divStayImage {
+  border-radius: 24px;
+  max-width: 395px;
+  height: 269px;
+  overflow: hidden;
+}
+.Cards_divStayImage > img {
+  max-width: 395px;
+}
+
+.Cards_divStayInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 15px 0;
+}
+.Cards_divStayText {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.Cards_divStayText > span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+  padding: 7px 9px 6px 10px;
+  border: 1px solid #4F4F4F;
+  border-radius: 12px;
+}
+.Cards_divStayText > p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+}
+
+.Cards_divStayRating {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4F4F4F;
+}
+
+.Cards_card > p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+}
