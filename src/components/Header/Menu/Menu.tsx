@@ -11,8 +11,6 @@ function Menu(props:any) {
 
   const guestsTotal = adultsNum + childrenNum;
 
-  console.log(guestsTotal)
-
   function handleClose(){
     props.closeMenu(false)
   };

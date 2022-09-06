@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import { useDispatch , useSelector} from 'react-redux'
 import './Home.css'
 import TopHome from './TopHome/TopHome'
-import { setAllHotels } from '../../redux/slice/allHotels'
+import Cards from './Cards/Cards'
 
 function Home() {
 
@@ -11,12 +11,13 @@ function Home() {
   // useEffect(() => {
   // })
 
-  const hoteles = useSelector((state:any) => state)
+  // const hoteles = useSelector((state:any) => state)
   // console.log(hoteles.allHotels.allHotels)
 
   return (
     <main>
       <TopHome />
+      <Cards />
     </main>
   )
 }
