@@ -27,9 +27,10 @@ function Cards() {
               <div className='Cards_divStayImage'>
                 <img src={e.image} alt="Stay" />
               </div>
-              <div className='Cards_divStayInfo'>
+              <div className={e.super_host ? 'Cards_divStayInfo superHost' : 'Cards_divStayInfo'}>
                 <div className='Cards_divStayText'>
-                  {e.super_host && <span>SUPER HOST</span>}
+                  {e.super_host && <span className='Cards_superHostButton'>SUPER HOST</span>}
+                  {e.super_host && <span className='Cards_spButton'>SH</span>}
                   <p>Entire apartment. 2beds</p>
                 </div>
                 <div className='Cards_divStayRating'>
