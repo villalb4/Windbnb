@@ -1,3 +1,8 @@
+
+.Cards_component {
+  margin-bottom: 200px;
+}
+
 .Cards_divContent {
   display: grid;
   grid-template-columns: repeat(auto-fill, 395px);
@@ -13,7 +18,7 @@
 .Cards_divStayImage {
   border-radius: 24px;
   max-width: 395px;
-  height: 269px;
+  max-height: 269px;
   overflow: hidden;
 }
 .Cards_divStayImage > img {
@@ -52,6 +57,9 @@
 }
 
 .Cards_divStayRating {
+  display: flex;
+  align-items: center;
+  gap: 7.12px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;

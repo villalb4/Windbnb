@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { getHotels } from '../../../redux/slice/allHotels'
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks/hooks'
 import './Cards.css'
+import star from '../../../assets/icon-star.png'
 
 
 function Cards() {
@@ -17,6 +18,7 @@ function Cards() {
   console.log(hoteles)
 
   return (
+    // <img src={e.image} alt="Stay" />
     <div className='Cards_component'>
       <div className='Cards_divContent'>
         {hoteles.map((e:any, i:number) => {
@@ -31,7 +33,7 @@ function Cards() {
                   <p>Entire apartment. 2beds</p>
                 </div>
                 <div className='Cards_divStayRating'>
-                  <img src="" alt="" />
+                  <img src={star} alt="" />
                   <span>{e.rating}</span>
                 </div>
               </div>

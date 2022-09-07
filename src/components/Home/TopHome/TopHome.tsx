@@ -1,7 +1,13 @@
 import React from 'react'
+import { useAppSelector } from '../../../redux/hooks/hooks'
 import './TopHome.css'
 
+
 function TopHome() {
+
+  const hotels = useAppSelector((state: any) => state.allHotels.allHotels)
+  const totalStays = hotels.length
+
   return (
     <div className='TopHome_component'>
       <div className='TopH_divStayIn'>
@@ -9,7 +15,7 @@ function TopHome() {
       </div>
 
       <div className='TopH_divStayNums'>
-        <span>12+ stays</span>
+        <span>{totalStays}+ stays</span>
       </div>
     </div>
   )
