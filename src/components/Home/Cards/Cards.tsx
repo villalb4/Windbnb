@@ -20,7 +20,7 @@ function Cards() {
   return (
     // <img src={e.image} alt="Stay" />
     <div className='Cards_component'>
-      <div className='Cards_divContent'>
+<!--       <div className='Cards_divContent'>
         {hoteles.map((e:any, i:number) => {
           return(
             <div key={i} className="Cards_card">
@@ -42,7 +42,7 @@ function Cards() {
             </div>
           )
         })}
-      </div>
+      </div> -->
     </div>
   )
 }
