@@ -6,7 +6,7 @@
 .MenuG_divSpans {
   margin-bottom: 12px;
 }
-/* .MenuG_divSpans > span {
+.MenuG_divSpans > span {
   font-family: 'Mulish';
   font-style: normal;
   font-weight: 700;
@@ -44,4 +44,4 @@
   font-size: 14px;
   line-height: 18px;
   color: #333333;
-} */
+}
