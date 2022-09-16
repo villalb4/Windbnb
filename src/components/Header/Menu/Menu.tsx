@@ -1,7 +1,7 @@
 import React from 'react'
 import './Menu.css'
 import icon_search from '../../../assets/icon-search-white.png'
-// import MenuGuests from './MenuGuests/MenuGuests'
+import MenuGuests from './MenuGuests/MenuGuests'
 import {useSelector} from 'react-redux'
 import MenuLocation from './MenuLocation/MenuLocation'
 
@@ -51,7 +51,7 @@ function Menu(props:any) {
             <MenuLocation />
           </div>
           <div className='Menu_buttonDivGue'>
-            {/* <MenuGuests /> */}
+            <MenuGuests />
           </div>
         </div>
       </div>
