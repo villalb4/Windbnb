@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// export interface NewHotel : {hotel: object}[] = {
-//     hotel: {}
-// }
+interface hotelsState {
+  allHotels: object[]
+}
 
-const initialState = {
+const initialState: hotelsState = {
   allHotels: [],
 }
 
