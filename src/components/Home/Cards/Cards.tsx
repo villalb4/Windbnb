@@ -15,13 +15,12 @@ function Cards() {
 
   const hoteles = useAppSelector((state: any) => state.allHotels.allHotels)
 
-  console.log(hoteles)
+  console.log("hotels :", hoteles)
 
   return (
-    // <img src={e.image} alt="Stay" />
     <div className='Cards_component'>
       <div className='Cards_divContent'>
-        {hoteles.map((e:any, i:number) => {
+        {hoteles?.map((e:any, i:number) => {
           return(
             <div key={i} className="Cards_card">
               <div className='Cards_divStayImage'>

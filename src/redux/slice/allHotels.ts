@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // }
 
 const initialState = {
-  allHotels: {}
+  allHotels: [],
 }
 
 export const allHotelsSlice = createSlice({
@@ -23,7 +23,8 @@ export default allHotelsSlice.reducer
 
 export const getHotels= () => {
   return (dispatch:any) => {
-    const data: object = [{
+    //fake api
+    const data: object[] = [{
       image : "https://alterainvest.ru/upload/resize_cache/iblock/720/490_330_2/720de7e683a11c7017ca85529e9583cb.jpg",
       super_host: true,
       beds: 2,
@@ -75,3 +76,4 @@ export const getHotels= () => {
     dispatch(setAllHotels(data))
   }
 }
+
