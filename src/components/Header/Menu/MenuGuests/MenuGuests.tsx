@@ -1,5 +1,5 @@
 import React from 'react'
-import './this.css'
+import './MenuGuests.css'
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks/hooks'
 import {adultIncrement, adultDecrement, chilIncrement, chilDecrement} from '../../../../redux/slice/menuCounter'
 
