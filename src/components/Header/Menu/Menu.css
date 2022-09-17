@@ -36,7 +36,26 @@
 .Menu_divTopTextButton {
     display: none;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
+}
+.Menu_divTextEdit > span {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #333333;
+}
+.Menu_divButtonX > button {
+    font-family: 'montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 10px;
+    color: #333333;
+    border: none;
+    padding: 1.5px 0.7px;
+    background-color: transparent;
 }
 
 .Menu_topDivOption {
@@ -193,7 +212,7 @@
         background-color: #FFF;
         box-shadow: 0px 1px 6px 0px #0000001A;
         border-radius: 16px;
-        margin-bottom: 48px;
+        margin-bottom: 35px;
     }
 
     .Menu_topDivOptionBorder {
@@ -208,10 +227,16 @@
         width: 100%;
         padding: 0 26px;
     }
+    .Menu_topDivOption {
+        border-radius: 16px 16px 0 0;
+    }
     .Menu_topDivOption.divGuests {
         max-width: 597px;
         width: 100%;
         padding: 0 26px;
+    }
+    .Menu_topDivOption.divGuests {
+        border-radius: 0 0 16px 16px;
     }
     .Menu_topDivOption.divSearch {
         display: none;

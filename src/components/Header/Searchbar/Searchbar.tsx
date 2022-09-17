@@ -33,7 +33,7 @@ function Searchbar(props:any) {
     <div className='Header_divSearch'>
       <div className='Header_search'>
         <div className='Header_divSearchLocation' onClick={handleLocationFocus}>
-          <span>{location}</span>
+          <span>{location ? location : 'Add location'}</span>
         </div>
         <div className='Header_divSearchGuests' onClick={handleGuestsFocus}>
           <span className={guestsTotal >=1 ? 'Header_spanTotalGuest active' : 'Header_spanTotalGuest'}>

@@ -45,7 +45,14 @@ function Menu(props:any) {
             <div className='Menu_top'>
               <div className='Menu_topDivOption divLocation'>
                 <span className='Menu_optionSpan'>LOCATION</span>
-                <input ref={props.refLoc} className='Menu_InputLocation' type="text" placeholder='Add location' onChange={handleChange} value={inputValue}/>
+                <input 
+                  ref={props.refLoc}
+                  className='Menu_InputLocation'
+                  type="text"
+                  placeholder='Add location'
+                  onChange={handleChange}
+                  value={inputValue}
+                />
               </div>
               <div className='Menu_topDivOptionBorder'>
                 <div ref={props.refGue} className='Menu_topDivOption divGuests'>
