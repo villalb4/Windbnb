@@ -17,3 +17,10 @@ main {
   font-weight: 700;
   color: #828282;
 }
+
+
+@media screen and (max-width: 597px) {
+  main {
+    padding: 0 13px;
+  }
+}

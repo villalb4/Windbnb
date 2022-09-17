@@ -15,12 +15,10 @@ function Cards() {
 
   const hoteles = useAppSelector((state: any) => state.allHotels.allHotels)
 
-  console.log("hotels :", hoteles)
-
   return (
     <div className='Cards_component'>
       <div className='Cards_divContent'>
-        {hoteles?.map((e:any, i:number) => {
+        {hoteles.slice(0,6).map((e:any, i:number) => {
           return(
             <div key={i} className="Cards_card">
               <div className='Cards_divStayImage'>

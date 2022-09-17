@@ -25,6 +25,7 @@ export const getHotels= () => {
   return (dispatch:any) => {
     //fake api
     const data: object[] = [{
+      //--------------------------FINALANDIA-------------------------------
       id: 1,
       image : "https://alterainvest.ru/upload/resize_cache/iblock/720/490_330_2/720de7e683a11c7017ca85529e9583cb.jpg",
       super_host: true,
@@ -78,6 +79,38 @@ export const getHotels= () => {
       description: "Stylist apartment in center of the city",
       location: "finlandia"
     },
+
+    {
+      id: 6,
+      image : "https://cdn.shopify.com/s/files/1/0610/6959/0775/articles/comment-disposer-ses-meubles-dans-salon-salle-a-manger-1_1000x.jpg?v=1639155465",
+      super_host: false,
+      beds: 2,
+      rating: "4.90",
+      description: "Stylist apartment in center of the city",
+      location: "finlandia"
+    },
+    {
+      id: 6,
+      image : "https://cdn.shopify.com/s/files/1/0610/6959/0775/articles/comment-disposer-ses-meubles-dans-salon-salle-a-manger-1_1000x.jpg?v=1639155465",
+      super_host: false,
+      beds: 2,
+      rating: "4.90",
+      description: "Stylist apartment in center of the city",
+      location: "finlandia"
+    },
+    {
+      id: 6,
+      image : "https://cdn.shopify.com/s/files/1/0610/6959/0775/articles/comment-disposer-ses-meubles-dans-salon-salle-a-manger-1_1000x.jpg?v=1639155465",
+      super_host: false,
+      beds: 2,
+      rating: "4.90",
+      description: "Stylist apartment in center of the city",
+      location: "finlandia"
+    },
+
+    
+    //--------------------------BUENOS AIRES-------------------------------
+
     ]
     dispatch(setAllHotels(data))
   }

@@ -14,3 +14,26 @@ header {
 .Header_logo {
   cursor: pointer;
 }
+
+@media screen and (max-width: 597px) {
+  .Header_divContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Header_logo {
+    margin-bottom: 39px;
+  }
+  nav {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  header {
+    padding: 0 13px;
+    margin-bottom: 0px;
+  }
+  .Header_divContent {
+    padding: 32px 0 37px 0;
+  }
+}

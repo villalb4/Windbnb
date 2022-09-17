@@ -1,12 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../../../redux/hooks/hooks'
 import './Searchbar.css'
 import icon_search from '../../../assets/icon-search.png'
 
 function Searchbar(props:any) {
 
-  const adultsNum = useSelector((state: any) => state.menuCounter.adults)
-  const childrenNum = useSelector((state: any) => state.menuCounter.children)
+  const location = useAppSelector((state:any) => state.location.name)
+
+  const adultsNum = useAppSelector((state: any) => state.menuCounter.adults)
+  const childrenNum = useAppSelector((state: any) => state.menuCounter.children)
   const guestsTotal = adultsNum + childrenNum;
 
   function handleOpen() {
@@ -31,7 +33,7 @@ function Searchbar(props:any) {
     <div className='Header_divSearch'>
       <div className='Header_search'>
         <div className='Header_divSearchLocation' onClick={handleLocationFocus}>
-          <span>Add location</span>
+          <span>{location}</span>
         </div>
         <div className='Header_divSearchGuests' onClick={handleGuestsFocus}>
           <span className={guestsTotal >=1 ? 'Header_spanTotalGuest active' : 'Header_spanTotalGuest'}>
