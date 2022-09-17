@@ -8,10 +8,12 @@ function TopHome() {
   const hotels = useAppSelector((state: any) => state.allHotels.allHotels)
   const totalStays = hotels.length
 
+  const location = useAppSelector((state:any) => state.location.name)
+
   return (
     <div className='TopHome_component'>
       <div className='TopH_divStayIn'>
-        <h1>Stays in</h1>
+        <h1>{`Stays in ${location}`}</h1>
       </div>
 
       <div className='TopH_divStayNums'>

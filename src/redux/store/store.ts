@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import allHotels from "../slice/allHotels";
 import menuCounter from "../slice/menuCounter";
+import location from "../slice/location";
 
 const store = configureStore({
   reducer: {
     allHotels,
-    menuCounter : menuCounter
+    menuCounter,
+    location
   },
 })
 

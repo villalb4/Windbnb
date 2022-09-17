@@ -8,6 +8,7 @@ function Home() {
     <main>
       <TopHome />
       <Cards />
+      <p className='Home_credits'>created by <a href="https://github.com/villalb4" target="_blanck" className='Home_spanUser'>villalb4</a> - devChallenges.io</p>
     </main>
   )
 }
