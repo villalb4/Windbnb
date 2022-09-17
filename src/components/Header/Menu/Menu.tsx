@@ -1,20 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Menu.css'
 import icon_search from '../../../assets/icon-search-white.png'
 import MenuGuests from './MenuGuests/MenuGuests'
-import {useSelector} from 'react-redux'
+import { useAppSelector, useAppDispatch } from '../../../redux/hooks/hooks'
+import { setLocationName } from '../../../redux/slice/location'
 import MenuLocation from './MenuLocation/MenuLocation'
 
 function Menu(props:any) {
 
-  const adultsNum = useSelector((state: any) => state.menuCounter.adults)
-  const childrenNum = useSelector((state: any) => state.menuCounter.children)
+  const dispatch = useAppDispatch()
+  const location = useAppSelector((state: any) => state.location.name)
+
+  const adultsNum = useAppSelector((state: any) => state.menuCounter.adults)
+  const childrenNum = useAppSelector((state: any) => state.menuCounter.children)
+
 
   const guestsTotal = adultsNum + childrenNum;
 
+  const [inputValue, setInputValue] = useState(location)
+
   function handleClose(){
+    dispatch(setLocationName(inputValue))
     props.closeMenu(false)
   };
+
+  function handleChange(e:any) {
+    let value = e.target.value
+    setInputValue(value)
+  }
 
   return (
     <div className={props.stateMenu ? 'Menu_component active': 'Menu_component'}>
@@ -24,7 +37,7 @@ function Menu(props:any) {
             <div className='Menu_top'>
               <div className='Menu_topDivOption divLocation'>
                 <span className='Menu_optionSpan'>LOCATION</span>
-                <input ref={props.refLoc} className='Menu_InputLocation' type="text" placeholder='Add location'/>
+                <input ref={props.refLoc} className='Menu_InputLocation' type="text" placeholder='Add location' onChange={handleChange} value={inputValue}/>
               </div>
               <div className='Menu_topDivOptionBorder'>
                 <div ref={props.refGue} className='Menu_topDivOption divGuests'>
