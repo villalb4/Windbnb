@@ -33,6 +33,11 @@
     margin-bottom: 48px;
 }
 
+.Menu_divTopTextButton {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
 
 .Menu_topDivOption {
     display: flex;
@@ -162,4 +167,57 @@
 
 .Menu_buttonDivGue {
     padding: 0 13px;
+}
+
+.Menu_topDivOption.divSearchResponsive {
+    display: none;
+}
+
+
+@media screen and (max-width: 597px) {
+    .Menu_divContent {
+        background-color: #FFF;
+        padding: 18px 13px 24px 13px;
+        height: auto;
+    }
+    .Menu_divTopTextButton {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    .Menu_top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FFF;
+        box-shadow: 0px 1px 6px 0px #0000001A;
+        border-radius: 16px;
+        margin-bottom: 48px;
+    }
+
+    .Menu_topDivOptionBorder {
+        width: 100%;
+        border: none;
+        border-top: 1px solid #F2f2f2;
+    }
+
+
+    .Menu_topDivOption.divLocation {
+        max-width: 597px;
+        width: 100%;
+        padding: 0 26px;
+    }
+    .Menu_topDivOption.divGuests {
+        max-width: 597px;
+        width: 100%;
+        padding: 0 26px;
+    }
+    .Menu_topDivOption.divSearch {
+        display: none;
+    }
+    .Menu_topDivOption.divSearchResponsive {
+        display: block;
+    }
+
 }

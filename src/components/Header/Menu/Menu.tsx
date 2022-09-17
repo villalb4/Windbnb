@@ -34,6 +34,14 @@ function Menu(props:any) {
       <div className='Menu_divContent'>
         <div className='Menu_divBackground'>
           <div className='Menu_divTop'>
+            <div className='Menu_divTopTextButton'>
+              <div className='Menu_divTextEdit'>
+                <span>Edit your search</span>
+              </div>
+              <div className='Menu_divButtonX'>
+                <button onClick={handleClose}>x</button>
+              </div>
+            </div>
             <div className='Menu_top'>
               <div className='Menu_topDivOption divLocation'>
                 <span className='Menu_optionSpan'>LOCATION</span>
@@ -67,6 +75,16 @@ function Menu(props:any) {
             <MenuGuests />
           </div>
         </div>
+
+        <div className='Menu_topDivOption divSearchResponsive'>
+          <button className='Menu_SearchButton' onClick={handleClose}>
+            <div className='Menu_divIconSearch'>
+              <img className='Menu_iconSearch' src={icon_search} alt="" />
+            </div>
+            Search
+          </button>
+        </div>
+
       </div>
     </div>
   )
