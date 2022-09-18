@@ -7,10 +7,15 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
+  width: 100%;
+  border: none;
+  background-color: transparent;
 }
 
-.MenuLocation_divMapDefault:hover {
+.MenuLocation_divMapDefault:hover,
+.MenuLocation_divMapDefault:focus {
   background-color: #eb57572c;
+  outline: none;
 }
 
 .MenuLocation_divMapDefault > img {
@@ -25,4 +30,5 @@
   font-size: 14px;
   line-height: 18px;
   color: #4F4F4F;
+  pointer-events: none;
 }

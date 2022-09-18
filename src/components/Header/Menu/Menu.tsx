@@ -76,7 +76,7 @@ function Menu(props:any) {
 
         <div className='Menu_bottom'>
           <div className='Menu_buttonDivLoc'>
-            <MenuLocation />
+            <MenuLocation input={setInputValue} />
           </div>
           <div className='Menu_buttonDivGue'>
             <MenuGuests />
