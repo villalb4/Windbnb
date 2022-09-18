@@ -1,0 +1,28 @@
+.MenuLocation_divMapDefault {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.MenuLocation_divMapDefault:hover {
+  background-color: #eb57572c;
+}
+
+.MenuLocation_divMapDefault > img {
+  height: 19.47px;
+  width: 14px;
+}
+
+.MenuLocation_divMapDefault > span {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4F4F4F;
+}

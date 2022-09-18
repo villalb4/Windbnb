@@ -13,6 +13,7 @@ const locationSlice = createSlice({
   initialState,
   reducers: {
     setLocationName: function(state:any, action:any) {
+      console.log("slice: ",action.playload)
       state.name = action.payload;
     }
   }

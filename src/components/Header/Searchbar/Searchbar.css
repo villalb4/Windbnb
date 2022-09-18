@@ -25,6 +25,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.Header_divSearchLocation > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .Header_divSearchLocation:hover {
   background-color: #eb57570e;
