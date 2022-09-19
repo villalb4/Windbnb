@@ -14,7 +14,6 @@ function Menu(props:any) {
   const adultsNum = useAppSelector((state: any) => state.menuCounter.adults)
   const childrenNum = useAppSelector((state: any) => state.menuCounter.children)
 
-
   const guestsTotal = adultsNum + childrenNum;
 
   const [inputValue, setInputValue] = useState(location)
@@ -76,7 +75,7 @@ function Menu(props:any) {
 
         <div className='Menu_bottom'>
           <div className='Menu_buttonDivLoc'>
-            <MenuLocation input={setInputValue} />
+            <MenuLocation input={setInputValue} stateValue={inputValue}/>
           </div>
           <div className='Menu_buttonDivGue'>
             <MenuGuests />

@@ -13,7 +13,7 @@ function TopHome() {
   return (
     <div className='TopHome_component'>
       <div className='TopH_divStayIn'>
-        <h1>{`Stays in ${location}`}</h1>
+        <h1>{location.length === 0 ? 'Add location' : `Stays in ${location}`}</h1>
       </div>
 
       <div className='TopH_divStayNums'>

@@ -1,12 +1,20 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import './Header.css'
+import { useAppDispatch } from '../../redux/hooks/hooks'
 import Searchbar from './Searchbar/Searchbar'
+import { getCitys } from '../../redux/slice/citys'
 import Menu from './Menu/Menu'
 
 // ----- images -----
 import logo from '../../assets/logo.svg'
 
 function Header() {
+
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(getCitys())
+  })
 
   const [openMenu, setOpenMenu] = useState(false)
 

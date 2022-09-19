@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAppSelector } from '../../../redux/hooks/hooks'
+import { useAppSelector} from '../../../redux/hooks/hooks'
 import './Searchbar.css'
 import icon_search from '../../../assets/icon-search.png'
 
