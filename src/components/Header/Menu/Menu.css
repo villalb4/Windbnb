@@ -184,20 +184,26 @@
     max-width: 427px;
     width: 100%;
     padding: 0 17px;
+    transform: translateX(35px);
+    transition: all 0.3s ease;
 }
 .Menu_buttonDivLoc.active {
     opacity: 1;
     visibility: visible;
+    transform: translateX(0);
 }
 
 .Menu_buttonDivGue {
     opacity: 0;
     visibility: hidden;
     padding: 0 13px;
+    transform: translateX(35px);
+    transition: all 0.3s ease;
 }
 .Menu_buttonDivGue.active {
     opacity: 1;
     visibility: visible;
+    transform: translateX(0);
  }
  
 
