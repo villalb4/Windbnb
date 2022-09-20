@@ -1,9 +1,12 @@
 import React from 'react'
-import { useAppSelector} from '../../../redux/hooks/hooks'
+import { useAppSelector, useAppDispatch} from '../../../redux/hooks/hooks'
+import { setLocationCondition, setGuestsCondition } from '../../../redux/slice/menuSelect'
 import './Searchbar.css'
 import icon_search from '../../../assets/icon-search.png'
 
 function Searchbar(props:any) {
+
+  const dispatch = useAppDispatch()
 
   const location = useAppSelector((state:any) => state.location.name)
 
@@ -20,6 +23,8 @@ function Searchbar(props:any) {
     setTimeout(function() {
       props.refLoc.current.focus()
     }, 100)
+    dispatch(setLocationCondition(true))
+    dispatch(setGuestsCondition(false))
   }
 
   const handleGuestsFocus = () => {
@@ -27,6 +32,8 @@ function Searchbar(props:any) {
     setTimeout(function() {
       props.refGue.current.focus()
     }, 100)
+    dispatch(setGuestsCondition(true))
+    dispatch(setLocationCondition(false))
   }
 
   return (

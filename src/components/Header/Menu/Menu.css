@@ -179,14 +179,27 @@
     display: flex;
 }
 .Menu_buttonDivLoc {
+    opacity: 0;
+    visibility: hidden;
     max-width: 427px;
     width: 100%;
     padding: 0 17px;
 }
+.Menu_buttonDivLoc.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .Menu_buttonDivGue {
+    opacity: 0;
+    visibility: hidden;
     padding: 0 13px;
 }
+.Menu_buttonDivGue.active {
+    opacity: 1;
+    visibility: visible;
+ }
+ 
 
 .Menu_topDivOption.divSearchResponsive {
     display: none;

@@ -3,13 +3,15 @@ import allHotels from "../slice/allHotels";
 import menuCounter from "../slice/menuCounter";
 import location from "../slice/location";
 import citys from "../slice/citys";
+import menuSelect from "../slice/menuSelect";
 
 const store = configureStore({
   reducer: {
     allHotels,
     menuCounter,
     location,
-    citys
+    citys,
+    menuSelect,
   },
 })
 

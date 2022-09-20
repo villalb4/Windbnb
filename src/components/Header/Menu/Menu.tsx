@@ -4,6 +4,7 @@ import icon_search from '../../../assets/icon-search-white.png'
 import MenuGuests from './MenuGuests/MenuGuests'
 import { useAppSelector, useAppDispatch } from '../../../redux/hooks/hooks'
 import { setLocationName } from '../../../redux/slice/location'
+import { setLocationCondition, setGuestsCondition } from '../../../redux/slice/menuSelect'
 import MenuLocation from './MenuLocation/MenuLocation'
 
 function Menu(props:any) {
@@ -13,6 +14,12 @@ function Menu(props:any) {
 
   const adultsNum = useAppSelector((state: any) => state.menuCounter.adults)
   const childrenNum = useAppSelector((state: any) => state.menuCounter.children)
+
+  const locationState = useAppSelector((state:any) => state.menuSelect.locationCondition)
+  const guestsState = useAppSelector((state:any) => state.menuSelect.guestsCondition)
+
+  console.log("guests menu: ",guestsState)
+  console.log("location menu: ",locationState)
 
   const guestsTotal = adultsNum + childrenNum;
 
@@ -26,6 +33,16 @@ function Menu(props:any) {
   function handleChange(e:any) {
     let value = e.target.value
     setInputValue(value)
+  }
+
+  function handleLocation() {
+    dispatch(setLocationCondition(true))
+    dispatch(setGuestsCondition(false))
+  }
+
+  function guestsLocation() {
+    dispatch(setGuestsCondition(true))
+    dispatch(setLocationCondition(false))
   }
 
   return (
@@ -42,7 +59,7 @@ function Menu(props:any) {
               </div>
             </div>
             <div className='Menu_top'>
-              <div className='Menu_topDivOption divLocation'>
+              <div className='Menu_topDivOption divLocation' onClick={handleLocation}>
                 <span className='Menu_optionSpan'>LOCATION</span>
                 <input 
                   ref={props.refLoc}
@@ -54,7 +71,7 @@ function Menu(props:any) {
                 />
               </div>
               <div className='Menu_topDivOptionBorder'>
-                <div ref={props.refGue} className='Menu_topDivOption divGuests'>
+                <div ref={props.refGue} className='Menu_topDivOption divGuests' onClick={guestsLocation}>
                   <span className='Menu_optionSpan'>GUESTS</span>
                   <span className={guestsTotal >= 1 ? 'Menu_placeHolderSpan active' : 'Menu_placeHolderSpan'}>
                     {guestsTotal >= 1 ? `${guestsTotal} guests` : "Add guests"}
@@ -74,10 +91,10 @@ function Menu(props:any) {
         </div>
 
         <div className='Menu_bottom'>
-          <div className='Menu_buttonDivLoc'>
+          <div className={locationState ? 'Menu_buttonDivLoc active' : 'Menu_buttonDivLoc'}>
             <MenuLocation input={setInputValue} stateValue={inputValue}/>
           </div>
-          <div className='Menu_buttonDivGue'>
+          <div className={guestsState ? 'Menu_buttonDivGue active' : 'Menu_buttonDivGue'}>
             <MenuGuests />
           </div>
         </div>
