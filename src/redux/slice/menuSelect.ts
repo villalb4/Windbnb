@@ -16,11 +16,9 @@ const menuSelectSlice = createSlice({
   reducers: {
     setLocationCondition: function(state:any, action:any) {
       state.locationCondition = action.payload
-      console.log("location",state.locationCondition)
     },
     setGuestsCondition: function(state:any, action:any) {
       state.guestsCondition = action.payload
-      console.log("guests",state.guestsCondition)
     }
   }
 })
