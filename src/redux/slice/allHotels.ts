@@ -27,7 +27,7 @@ export const getHotels= () => {
     const data: object[] = [{
       //--------------------------FINALANDIA-------------------------------
       id: 1,
-      image : "https://alterainvest.ru/upload/resize_cache/iblock/720/490_330_2/720de7e683a11c7017ca85529e9583cb.jpg",
+      image : "https://homebnc.com/homeimg/2015/11/09-living-room-decor-homebnc.jpg",
       super_host: true,
       beds: 2,
       rating: "4.85",
@@ -45,7 +45,7 @@ export const getHotels= () => {
     },
     {
       id: 3,
-      image : "https://fountainera.com/wp-content/uploads/2021/10/fountainera20.jpg",
+      image : "https://th.bing.com/th/id/R.16e65214bb27f4fbb47b53d5ee341845?rik=ggfVFFTwd1IbRg&riu=http%3a%2f%2fmydecorative.com%2fwp-content%2fuploads%2f2013%2f06%2fMinimalist-home.jpg&ehk=7uqg2HOF%2bG%2fWo164D5vpCIRgj0GD34FIbbg9ZWRXk%2bg%3d&risl=&pid=ImgRaw&r=0",
       super_host: false,
       beds: 2,
       rating: "4.90",
